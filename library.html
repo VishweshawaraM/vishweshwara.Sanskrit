@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Library | Vishweshwara Sanskrit</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <script>tailwind.config = { theme: { extend: { colors: { gold: '#D4AF37', dark: '#050505' }, fontFamily: { heading: ['"Cormorant Garamond"', 'serif'], body: ['"Inter"', 'sans-serif'] } } } }</script>
+    <style>body { background-color: #050505; color: #e5e5e5; }</style>
+</head>
+<body class="font-body bg-dark">
+
+    <nav class="border-b border-white/10 bg-dark/95 fixed w-full top-0 z-50">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="font-heading text-xl font-bold text-gold tracking-widest uppercase">Vishweshwara.Sanskrit</a>
+            <div class="hidden md:flex space-x-8 text-xs font-medium tracking-widest uppercase text-gray-400">
+                <a href="index.html" class="hover:text-gold">Home</a>
+                <a href="classes.html" class="hover:text-gold">Classes</a>
+                <a href="library.html" class="text-white">Library</a>
+                <a href="pay.html" class="hover:text-gold">Pay & Report</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="pt-32 pb-20 px-6 max-w-4xl mx-auto">
+        <h1 class="font-heading text-4xl text-white mb-4 text-center">Grantha Bhāṇḍāgāra</h1>
+        <p class="text-center text-gray-500 mb-16 uppercase tracking-widest text-xs">Digital Resources & Study Materials</p>
+        
+        <div class="grid md:grid-cols-2 gap-10">
+            <div class="group bg-[#111] border border-white/10 p-10 rounded-xl hover:border-gold transition duration-300 text-center">
+                <div class="w-16 h-16 bg-white/5 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-gold/20 transition">
+                    <svg class="w-8 h-8 text-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                </div>
+                <h2 class="text-2xl text-white font-heading mb-3">Sanskrit Notes</h2>
+                <p class="text-gray-500 text-sm mb-8">Access handwritten grammar charts, class PDF notes, and worksheets.</p>
+                <a href="https://drive.google.com/drive/folders/1pazNVJKVXanzOet1c5nyGZCZ6vZ7f6hL" target="_blank" class="block w-full bg-gold text-black font-bold py-3 rounded uppercase text-xs tracking-widest hover:bg-white transition">
+                    Open Drive Folder
+                </a>
+            </div>
+
+            <div class="group bg-[#111] border border-white/10 p-10 rounded-xl hover:border-gold transition duration-300 text-center">
+                <div class="w-16 h-16 bg-white/5 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-gold/20 transition">
+                    <svg class="w-8 h-8 text-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"></path></svg>
+                </div>
+                <h2 class="text-2xl text-white font-heading mb-3">Vedic Audio</h2>
+                <p class="text-gray-500 text-sm mb-8">Listen to Mantra pronunciation guides, Sūktas, and chanting resources.</p>
+                <a href="https://drive.google.com/drive/folders/1pazNVJKVXanzOet1c5nyGZCZ6vZ7f6hL" target="_blank" class="block w-full bg-gold text-black font-bold py-3 rounded uppercase text-xs tracking-widest hover:bg-white transition">
+                    Open Drive Folder
+                </a>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
