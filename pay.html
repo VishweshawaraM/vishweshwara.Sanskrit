@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pay & Report | Vishweshwara Sanskrit</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <script>tailwind.config = { theme: { extend: { colors: { gold: '#D4AF37', dark: '#050505' }, fontFamily: { heading: ['"Cormorant Garamond"', 'serif'], body: ['"Inter"', 'sans-serif'] } } } }</script>
+    <style>body { background-color: #050505; color: #e5e5e5; }</style>
+</head>
+<body class="font-body bg-dark">
+
+    <nav class="border-b border-white/10 bg-dark/95 fixed w-full top-0 z-50">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="font-heading text-xl font-bold text-gold tracking-widest uppercase">Vishweshwara.Sanskrit</a>
+            <div class="hidden md:flex space-x-8 text-xs font-medium tracking-widest uppercase text-gray-400">
+                <a href="index.html" class="hover:text-gold">Home</a>
+                <a href="classes.html" class="hover:text-gold">Classes</a>
+                <a href="library.html" class="hover:text-gold">Library</a>
+                <a href="pay.html" class="text-white">Pay & Report</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="pt-32 pb-20 px-6 max-w-5xl mx-auto">
+        <div class="grid md:grid-cols-2 gap-16">
+            
+            <div>
+                <h1 class="font-heading text-3xl text-white mb-6">Guru Dakṣiṇā</h1>
+                <div class="bg-white/5 border border-white/10 p-8 rounded mb-8">
+                    <div class="flex gap-6 items-center">
+                        <div class="w-32 h-32 bg-white p-2 rounded">
+                            <img src="upi-qr.jpeg" alt="QR Code" class="w-full h-full object-contain">
+                        </div>
+                        <div>
+                            <p class="text-xs text-gray-500 uppercase tracking-widest mb-1">UPI ID</p>
+                            <p class="text-white font-mono text-lg break-all">vishweshwara.sanskrit@slc</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <h2 class="font-heading text-xl text-white mb-4">Terms & Conditions</h2>
+                <ul class="text-xs text-gray-400 space-y-2 list-disc pl-4 mb-8">
+                    <li>Fees are considered non-refundable Guru Dakṣiṇā.</li>
+                    <li>24-hour notice required for student cancellation.</li>
+                    <li>Acharya reserves the right to reschedule classes.</li>
+                </ul>
+            </div>
+
+            <div>
+                <h2 class="font-heading text-3xl text-white mb-6">Report Payment / Join</h2>
+                <p class="text-gray-500 text-sm mb-6">Use this form to submit payment screenshots OR request to join a class.</p>
+                
+                <form action="https://formsubmit.co/visanskrit.solopreneur@gmail.com" method="POST" enctype="multipart/form-data" class="space-y-4">
+                    <input type="hidden" name="_subject" value="Payment/Join Request">
+                    
+                    <input type="text" name="Name" placeholder="Full Name" required class="w-full bg-white/5 border border-white/10 p-4 text-white rounded focus:border-gold outline-none">
+                    <input type="text" name="Amount_or_Class" placeholder="Amount Paid OR Class Name" required class="w-full bg-white/5 border border-white/10 p-4 text-white rounded focus:border-gold outline-none">
+                    <textarea name="Note" rows="3" placeholder="Notes (e.g. 'Payment for Jan' or 'I want to join Gita class')" class="w-full bg-white/5 border border-white/10 p-4 text-white rounded focus:border-gold outline-none"></textarea>
+                    
+                    <div class="border border-dashed border-white/20 p-4 rounded text-center cursor-pointer relative hover:border-gold">
+                        <input type="file" name="Screenshot" class="absolute inset-0 w-full h-full opacity-0 cursor-pointer">
+                        <span class="text-xs text-gold uppercase tracking-widest">Upload Screenshot (Optional)</span>
+                    </div>
+
+                    <button type="submit" class="w-full bg-gold text-black font-bold py-4 uppercase tracking-widest text-xs rounded hover:bg-white transition">Submit</button>
+                </form>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
