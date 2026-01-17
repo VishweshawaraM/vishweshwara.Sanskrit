@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Classes | Vishweshwara Sanskrit</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Martel:wght@400;800&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <script>tailwind.config = { theme: { extend: { colors: { gold: '#D4AF37', dark: '#050505' }, fontFamily: { heading: ['"Cormorant Garamond"', 'serif'], sanskrit: ['"Martel"', 'serif'], body: ['"Inter"', 'sans-serif'] } } } }</script>
+    <style>body { background-color: #050505; color: #e5e5e5; }</style>
+</head>
+<body class="font-body bg-dark">
+
+    <nav class="border-b border-white/10 bg-dark/95 fixed w-full top-0 z-50">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="font-heading text-xl font-bold text-gold tracking-widest uppercase">Vishweshwara.Sanskrit</a>
+            <div class="hidden md:flex space-x-8 text-xs font-medium tracking-widest uppercase text-gray-400">
+                <a href="index.html" class="hover:text-gold">Home</a>
+                <a href="classes.html" class="text-white">Classes</a>
+                <a href="library.html" class="hover:text-gold">Library</a>
+                <a href="pay.html" class="hover:text-gold">Pay & Report</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="pt-32 pb-20 px-6 max-w-5xl mx-auto">
+        <h1 class="font-heading text-4xl text-white mb-12 text-center">Adhyayanam (Academic Programs)</h1>
+        
+        <div class="grid md:grid-cols-2 gap-8">
+            <div class="border border-white/10 p-10 rounded bg-white/5 hover:border-gold transition">
+                <div class="flex justify-between items-start mb-4">
+                    <h2 class="font-heading text-3xl text-white">Bhagavad Gītā</h2>
+                    <span class="bg-red-900/50 text-red-200 text-[10px] px-2 py-1 uppercase tracking-widest rounded">Active</span>
+                </div>
+                <p class="font-sanskrit text-gold text-sm mb-6">With Śāṅkara Bhāṣya</p>
+                <p class="text-gray-400 text-sm leading-relaxed mb-8">
+                    A rigorous, chapter-wise study for serious aspirants. Focus on Padaccheda (word split), Anvaya (order), and Siddhānta (meaning).
+                </p>
+                <a href="pay.html" class="text-gold text-xs uppercase tracking-widest border-b border-gold pb-1 hover:text-white transition">Join Class &rarr;</a>
+            </div>
+
+            <div class="border border-white/10 p-10 rounded bg-white/5 hover:border-gold transition">
+                <h2 class="font-heading text-3xl text-white mb-4">Sanskrit Vyākaraṇa</h2>
+                <p class="font-sanskrit text-gold text-sm mb-6">Introduction to Pāṇini</p>
+                <p class="text-gray-400 text-sm leading-relaxed mb-8">
+                    Master the fundamentals of the divine language. Focus on pronunciation (Ucchāraṇa), Sandhi, and sentence construction.
+                </p>
+                <a href="pay.html" class="text-gold text-xs uppercase tracking-widest border-b border-gold pb-1 hover:text-white transition">Join Class &rarr;</a>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
