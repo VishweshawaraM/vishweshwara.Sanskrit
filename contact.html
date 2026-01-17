@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact | Vishweshwara Sanskrit</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = { theme: { extend: { colors: { gold: '#D4AF37', dark: '#0a0a0a' }, fontFamily: { heading: ['"Cormorant Garamond"', 'serif'], body: ['"Inter"', 'sans-serif'] } } } }
+    </script>
+    <style>body { background-color: #0a0a0a; color: #e5e5e5; }</style>
+</head>
+<body class="font-body bg-dark">
+
+    <nav class="fixed w-full z-50 top-0 bg-dark/95 border-b border-white/10">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="font-heading text-lg tracking-widest text-gold uppercase font-bold">Vishweshwara.Sanskrit</a>
+            <div class="hidden md:flex space-x-8 text-xs font-medium tracking-widest uppercase text-gray-400">
+                <a href="index.html" class="hover:text-gold">Home</a>
+                <a href="classes.html" class="hover:text-gold">Classes</a>
+                <a href="pay.html" class="hover:text-gold">Payment</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="pt-32 pb-20 px-6 max-w-md mx-auto">
+        <h1 class="font-heading text-3xl text-white mb-8 text-center">Samparka (Contact)</h1>
+        
+        <form action="https://formsubmit.co/visanskrit.solopreneur@gmail.com" method="POST" class="space-y-4">
+            <input type="hidden" name="_subject" value="New Student Inquiry">
+            
+            <input type="text" name="Name" placeholder="Your Name" required class="w-full bg-white/5 border border-white/10 p-3 text-white rounded focus:border-gold outline-none">
+            <input type="email" name="Email" placeholder="Email Address" required class="w-full bg-white/5 border border-white/10 p-3 text-white rounded focus:border-gold outline-none">
+            <select name="Interest" class="w-full bg-white/5 border border-white/10 p-3 text-white rounded focus:border-gold outline-none">
+                <option>Bhagavad Gita Class</option>
+                <option>Sanskrit Grammar</option>
+                <option>Vedic Chanting</option>
+                <option>General Inquiry</option>
+            </select>
+            <textarea name="Message" rows="4" placeholder="Message..." class="w-full bg-white/5 border border-white/10 p-3 text-white rounded focus:border-gold outline-none"></textarea>
+            
+            <button type="submit" class="w-full bg-gold text-black font-bold py-3 uppercase tracking-widest text-xs hover:bg-white transition rounded">
+                Send Message
+            </button>
+        </form>
+
+        <div class="mt-12 pt-8 border-t border-white/10 text-center space-y-2">
+            <p class="text-sm text-white">visanskrit.solopreneur@gmail.com</p>
+            <p class="text-sm text-white">+91 9482698612</p>
+        </div>
+    </main>
+</body>
+</html>
