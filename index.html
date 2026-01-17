@@ -1,223 +1,43 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vishweshwara Sanskrit | Digital Gurukula</title>
+    <title>Vishweshwara Sanskrit | Home</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Martel:wght@400;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-    
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        gold: '#D4AF37', 
-                        dark: '#050505',
-                        card: 'rgba(255, 255, 255, 0.03)'
-                    },
-                    fontFamily: {
-                        sanskrit: ['"Martel"', 'serif'],
-                        heading: ['"Cormorant Garamond"', 'serif'],
-                        body: ['"Inter"', 'sans-serif'],
-                    }
-                }
-            }
-        }
-    </script>
-    <style>
-        body { background-color: #050505; color: #e5e5e5; }
-        .om-bg { position: fixed; inset: 0; z-index: -1; pointer-events: none; overflow: hidden; }
-        .om-symbol { position: absolute; color: rgba(212, 175, 55, 0.03); animation: floatUp 30s infinite linear; }
-        @keyframes floatUp { 0% { transform: translateY(110vh) rotate(0deg); opacity: 0; } 100% { transform: translateY(-10vh) rotate(10deg); opacity: 0; } }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Martel:wght@400;800&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <script>tailwind.config = { theme: { extend: { colors: { gold: '#D4AF37', dark: '#050505' }, fontFamily: { heading: ['"Cormorant Garamond"', 'serif'], sanskrit: ['"Martel"', 'serif'], body: ['"Inter"', 'sans-serif'] } } } }</script>
+    <style>body { background-color: #050505; color: #e5e5e5; } .om-bg { position: fixed; inset: 0; z-index: -1; opacity: 0.1; pointer-events: none; }</style>
 </head>
-<body class="font-body selection:bg-gold selection:text-black">
-
-    <div class="om-bg" id="om-container"></div>
-
-    <nav class="fixed w-full z-50 top-0 bg-dark/90 backdrop-blur border-b border-white/10">
+<body class="font-body flex flex-col min-h-screen">
+    
+    <nav class="border-b border-white/10 bg-dark/95 fixed w-full top-0 z-50">
         <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-            <span class="font-heading text-xl font-bold tracking-widest text-gold uppercase">Vishweshwara.Sanskrit</span>
-            <div class="hidden md:flex space-x-8 text-xs font-medium tracking-[0.15em] uppercase text-gray-400">
-                <a href="#home" class="hover:text-gold transition">Home</a>
-                <a href="#classes" class="hover:text-gold transition">Classes</a>
-                <a href="#payment" class="text-gold border border-gold/30 px-4 py-2 rounded hover:bg-gold hover:text-black transition">Pay & Report</a>
+            <span class="font-heading text-xl font-bold text-gold tracking-widest uppercase">Vishweshwara.Sanskrit</span>
+            <div class="hidden md:flex space-x-8 text-xs font-medium tracking-widest uppercase text-gray-400">
+                <a href="index.html" class="text-white">Home</a>
+                <a href="classes.html" class="hover:text-gold transition">Classes</a>
+                <a href="library.html" class="hover:text-gold transition">Library</a>
+                <a href="pay.html" class="hover:text-gold transition">Pay & Report</a>
             </div>
         </div>
     </nav>
 
-    <section id="home" class="min-h-screen flex items-center justify-center px-6 pt-20 text-center">
+    <main class="flex-grow flex items-center justify-center text-center px-6 mt-20">
         <div class="max-w-4xl">
-            <p class="text-gold/80 font-sanskrit text-lg mb-6">॥ श्री गुरुभ्यो नमः ॥</p>
-            <h1 class="font-heading text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-                Traditional <span class="text-gold">Gurukula</span> Education
-            </h1>
-            <p class="text-gray-400 text-lg leading-relaxed max-w-2xl mx-auto mb-10">
-                Preserving the sanctity of <strong>Sanskrit Vyākaraṇa</strong>, <strong>Advaita Vedanta</strong>, and <strong>Bhagavad Gītā</strong>. 
-                <br>Strict adherence to Śāstra (Scripture) and Paramparā (Lineage).
+            <p class="text-gold/80 font-sanskrit text-xl mb-6">॥ श्री गुरुभ्यो नमः ॥</p>
+            <h1 class="font-heading text-6xl md:text-8xl text-white mb-6">The Digital Gurukula</h1>
+            <p class="text-gray-400 text-lg max-w-2xl mx-auto mb-10 leading-relaxed">
+                Dedicated to the preservation of <strong>Sanskrit Vyākaraṇa</strong>, <strong>Advaita Vedanta</strong>, and the <strong>Bhagavad Gītā</strong>.
             </p>
-            
             <div class="flex justify-center gap-6">
-                <a href="#classes" class="bg-gold text-black px-8 py-3 rounded font-bold tracking-widest text-xs uppercase hover:bg-white transition">
-                    View Classes
+                <a href="classes.html" class="bg-gold text-black px-10 py-4 rounded font-bold tracking-widest text-xs uppercase hover:bg-white transition">
+                    View Courses
                 </a>
-                <a href="#payment" class="border border-gold text-gold px-8 py-3 rounded font-bold tracking-widest text-xs uppercase hover:bg-gold/10 transition">
-                    Pay Fees
+                <a href="library.html" class="border border-gold text-gold px-10 py-4 rounded font-bold tracking-widest text-xs uppercase hover:bg-gold/10 transition">
+                    Open Library
                 </a>
             </div>
         </div>
-    </section>
-
-    <section id="classes" class="py-24 px-6 bg-card border-y border-white/5">
-        <div class="max-w-5xl mx-auto">
-            <div class="text-center mb-16">
-                <h2 class="font-heading text-4xl text-white mb-2">Our Classes</h2>
-                <p class="text-gold text-xs uppercase tracking-widest">Active Programs</p>
-            </div>
-
-            <div class="grid md:grid-cols-2 gap-8">
-                <div class="border border-white/10 p-8 rounded hover:border-gold/50 transition relative group">
-                    <div class="absolute top-0 right-0 bg-red-900/40 text-red-200 text-[10px] px-3 py-1 uppercase tracking-widest">Active</div>
-                    <h3 class="font-heading text-2xl text-white mb-2">Bhagavad Gītā</h3>
-                    <p class="font-sanskrit text-gold text-sm mb-4">With Shankara Bhashya</p>
-                    <p class="text-sm text-gray-400 leading-relaxed mb-6">
-                        Rigorous, chapter-wise study for serious aspirants. Focus on word meaning, logical order, and philosophy.
-                    </p>
-                    <a href="#lead-form" class="inline-block text-xs uppercase tracking-widest border-b border-gold text-gold pb-1 hover:text-white transition">Join Class</a>
-                </div>
-
-                <div class="border border-white/10 p-8 rounded hover:border-gold/50 transition group">
-                    <h3 class="font-heading text-2xl text-white mb-2">Sanskrit Grammar</h3>
-                    <p class="font-sanskrit text-gold text-sm mb-4">Introduction to Panini</p>
-                    <p class="text-sm text-gray-400 leading-relaxed mb-6">
-                        Master the fundamentals: Pronunciation, Sandhi, and Sentence Construction.
-                    </p>
-                    <a href="#lead-form" class="inline-block text-xs uppercase tracking-widest border-b border-gold text-gold pb-1 hover:text-white transition">Join Class</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-16 px-6">
-        <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-6">
-            <a href="https://drive.google.com/drive/folders/1pazNVJKVXanzOet1c5nyGZCZ6vZ7f6hL" target="_blank" class="block bg-white/5 p-6 rounded hover:bg-white/10 transition border border-white/5 hover:border-gold text-center">
-                <h3 class="text-white font-heading text-lg">Sanskrit Notes (Drive)</h3>
-            </a>
-            <a href="https://drive.google.com/drive/folders/1pazNVJKVXanzOet1c5nyGZCZ6vZ7f6hL" target="_blank" class="block bg-white/5 p-6 rounded hover:bg-white/10 transition border border-white/5 hover:border-gold text-center">
-                <h3 class="text-white font-heading text-lg">Vedic Audio (Drive)</h3>
-            </a>
-        </div>
-    </section>
-
-    <section id="payment" class="py-24 px-6 bg-card border-t border-white/5">
-        <div class="max-w-5xl mx-auto">
-            <h2 class="font-heading text-4xl text-white mb-12 text-center">Guru Dakṣiṇā & Reporting</h2>
-
-            <div class="grid md:grid-cols-2 gap-16 items-start">
-                
-                <div class="space-y-8">
-                    <div class="p-8 border border-white/10 rounded bg-dark">
-                        <h3 class="text-gold font-heading text-xl mb-6">Step 1: Make Payment</h3>
-                        <div class="flex gap-6 items-center">
-                            <div class="w-32 h-32 bg-white p-2 rounded">
-                                <img src="upi-qr.jpeg" alt="QR Code" class="w-full h-full object-contain">
-                            </div>
-                            <div>
-                                <p class="text-xs text-gray-500 uppercase tracking-widest mb-1">UPI ID</p>
-                                <p class="text-white font-mono text-lg break-all">vishweshwara.sanskrit@slc</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="p-6 bg-white/5 rounded border border-white/5">
-                        <h3 class="text-white font-bold mb-4 border-b border-white/10 pb-2">Terms & Conditions</h3>
-                        <ul class="text-xs text-gray-400 space-y-3 list-disc pl-4 leading-relaxed">
-                            <li><strong>Nature of Payment:</strong> Fees are considered <em>Guru Dakṣiṇā</em> (honorarium), not a commercial purchase.</li>
-                            <li><strong>No Refunds:</strong> Once paid, fees are non-refundable. In rare cases, they may be adjusted for future classes at the Acharya's discretion.</li>
-                            <li><strong>Cancellation Policy:</strong> Students must notify 24 hours in advance for leave. Uninformed absence is counted as a paid class.</li>
-                            <li><strong>Rescheduling:</strong> If the Acharya cancels a class, it will be rescheduled with no loss to the student.</li>
-                            <li><strong>Discipline:</strong> Continued indiscipline or lack of attendance may result in discontinuation of classes.</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div>
-                    <h3 class="text-gold font-heading text-xl mb-6">Step 2: Report Payment</h3>
-                    <p class="text-gray-400 text-sm mb-6">
-                        After paying, please fill this details so I can update your attendance register.
-                    </p>
-                    
-                    <form action="https://formsubmit.co/visanskrit.solopreneur@gmail.com" method="POST" enctype="multipart/form-data" class="space-y-5">
-                        
-                        <input type="hidden" name="_subject" value="New Payment Screenshot Received">
-                        <input type="hidden" name="_captcha" value="false">
-
-                        <div>
-                            <label class="text-xs text-gold uppercase tracking-widest block mb-2">Student Name</label>
-                            <input type="text" name="Student Name" required class="w-full bg-dark border border-white/10 p-4 text-white focus:border-gold outline-none rounded">
-                        </div>
-
-                        <div class="grid grid-cols-2 gap-4">
-                            <div>
-                                <label class="text-xs text-gold uppercase tracking-widest block mb-2">Amount (₹)</label>
-                                <input type="number" name="Amount" required class="w-full bg-dark border border-white/10 p-4 text-white focus:border-gold outline-none rounded">
-                            </div>
-                            <div>
-                                <label class="text-xs text-gold uppercase tracking-widest block mb-2">Date of Pay</label>
-                                <input type="date" name="Payment Date" required class="w-full bg-dark border border-white/10 p-4 text-gray-400 focus:border-gold outline-none rounded">
-                            </div>
-                        </div>
-
-                        <div>
-                            <label class="text-xs text-gold uppercase tracking-widest block mb-2">Note (Optional)</label>
-                            <textarea name="Note" rows="2" placeholder="Ex: For Jan 2026 classes, discussed on call..." class="w-full bg-dark border border-white/10 p-4 text-white focus:border-gold outline-none rounded"></textarea>
-                        </div>
-
-                        <div class="border border-dashed border-white/20 p-6 rounded text-center hover:border-gold transition cursor-pointer relative">
-                            <input type="file" name="Screenshot" accept="image/*" class="absolute inset-0 w-full h-full opacity-0 cursor-pointer" required>
-                            <p class="text-white text-sm font-medium">Upload Screenshot</p>
-                            <p class="text-gray-500 text-xs mt-1">Click to attach payment proof</p>
-                        </div>
-
-                        <button type="submit" class="w-full bg-gold text-black font-bold py-4 uppercase tracking-widest text-xs hover:bg-white transition rounded">
-                            Send Payment Proof
-                        </button>
-                    </form>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <section id="lead-form" class="py-24 px-6 text-center border-t border-white/5">
-        <h2 class="font-heading text-3xl text-white mb-8">New Student Inquiry</h2>
-        <p class="text-gray-500 mb-8 max-w-xl mx-auto">Not a student yet? Fill this simple form to get details about joining.</p>
-        
-        <form action="https://formsubmit.co/visanskrit.solopreneur@gmail.com" method="POST" class="max-w-md mx-auto space-y-4">
-            <input type="hidden" name="_subject" value="New Student Lead">
-            <input type="text" name="Lead Name" placeholder="Your Name" class="w-full bg-white/5 border border-white/10 p-3 text-white rounded">
-            <input type="text" name="Lead Phone" placeholder="WhatsApp Number" class="w-full bg-white/5 border border-white/10 p-3 text-white rounded">
-            <button type="submit" class="w-full bg-white/10 text-white py-3 rounded hover:bg-gold hover:text-black transition uppercase text-xs tracking-widest">Request Details</button>
-        </form>
-    </section>
-
-    <footer class="py-8 text-center text-[10px] text-gray-600 uppercase tracking-widest border-t border-white/5">
-        &copy; 2026 Vishweshwara Sanskrit.
-    </footer>
-
-    <script>
-        const container = document.getElementById('om-container');
-        const symbols = ['ॐ', '࿕', 'श्री', '॥']; 
-        for(let i=0; i<25; i++) {
-            const el = document.createElement('div');
-            el.classList.add('om-symbol');
-            el.innerText = symbols[Math.floor(Math.random() * symbols.length)];
-            el.style.left = Math.random() * 100 + 'vw';
-            el.style.animationDuration = (Math.random() * 20 + 20) + 's';
-            el.style.fontSize = (Math.random() * 3 + 2) + 'rem';
-            container.appendChild(el);
-        }
-    </script>
+    </main>
 </body>
 </html>
